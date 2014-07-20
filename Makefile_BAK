@@ -1,0 +1,16 @@
+ifneq ($(KERNELRELEASE),)
+# call from kernel build system
+
+scull-objs := main.o scull.o
+
+obj-m	:= scull.o
+
+else
+
+KERNELDIR ?= /lib/modules/$(shell uname -r)/build
+PWD       := $(shell pwd)
+
+modules:
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) LDDINC=$(PWD)/../include modules
+
+endif
