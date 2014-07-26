@@ -1,1 +1,0 @@
-cmd_/home/proust/workspace/Driver/scull/scull.ko := ld -r -m elf_x86_64 -T /usr/src/kernels/3.14.9-200.fc20.x86_64/scripts/module-common.lds --build-id  -o /home/proust/workspace/Driver/scull/scull.ko /home/proust/workspace/Driver/scull/scull.o /home/proust/workspace/Driver/scull/scull.mod.o
